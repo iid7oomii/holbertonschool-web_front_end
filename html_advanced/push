@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    msg="Update files"
+else
+    msg="$1"
+fi
+
+echo "Adding files..."
+git add .
+
+echo "Committing with message: $msg"
+git commit -m "$msg"
+
+echo "Pushing to GitHub..."
+git push
+
+echo "�~_~Z~@ Done!"
